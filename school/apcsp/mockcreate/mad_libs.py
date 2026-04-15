@@ -16,7 +16,7 @@ phrases = [
 sets = [set1, set2, set3]
 
 # Finds out how long of a phrase the user wants
-print("Welcome to Mad Libs!")
+print("Welcome to Mad Libs!!")
 choice = int(input(f"""
 Pick a set:
 1 - Short | {len(set1)} Words
@@ -58,7 +58,8 @@ story = phrases[choice]
 # Example: #13 being identified as #1 + 3
 for i in range(len(new_words), 0, -1):
     placeholder = f"#{i}"
-    story = story.replace(placeholder, new_words[i-1])
+    story = story.replace(placeholder, new_words[i-1]) 
+
 
 os.system('clear')
 your_words = ", ".join(new_words)
