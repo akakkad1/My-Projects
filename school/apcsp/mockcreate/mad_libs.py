@@ -52,10 +52,6 @@ def fill_words(selected_list):
 # Configures the correct set of words
 new_words = fill_words(sets[choice])
 story = phrases[choice]
-
-# Inserts each word into the phrase. 
-# This must go backwards as to avoid double digit numbers to be identified as single digit.
-# Example: #13 being identified as #1 + 3
 for i in range(len(new_words), 0, -1):
     placeholder = f"#{i}"
     story = story.replace(placeholder, new_words[i-1]) 
