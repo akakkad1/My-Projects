@@ -1,5 +1,7 @@
+# Prepares libraries and console
 import os
 os.system('clear')
+
 # Data for the program
 set1 = ["Noun", "Adjective", "Verb", "Place", "Exclamation"]
 set2 = ["Adjective", "Noun", "Verb", "Adverb", "Food", "Color", "Animal", "Noun", "Adjective", "Noun"]
@@ -22,13 +24,19 @@ Pick a set:
 3 - Long | {len(set3)} Words
 Selected Set: """))
 
+os.system('clear')
+print(f"You picked set: {choice}\n")
+
 # Makes sure the user picks a valid option
 if not 1 <= choice <= 3:
     os.system('clear')
     print("Invalid choice!\n")
     exit()
 
-# Passes through the user-selected list and loops through each word to ask the user
+# Index starts at 0
+choice -= 1
+
+# Passes through the user-selected list and loops through asking the user and saves the data
 def fill_words(selected_list):
     user_set = []
     for word_type in selected_list:
@@ -42,9 +50,8 @@ def fill_words(selected_list):
     return user_set
 
 # Configures the correct set of words
-selected_index = choice - 1
-new_words = fill_words(sets[selected_index])
-story = phrases[selected_index]
+new_words = fill_words(sets[choice])
+story = phrases[choice]
 
 # Inserts each word into the phrase. 
 # This must go backwards as to avoid double digit numbers to be identified as single digit.
@@ -54,5 +61,7 @@ for i in range(len(new_words), 0, -1):
     story = story.replace(placeholder, new_words[i-1])
 
 os.system('clear')
+your_words = ", ".join(new_words)
+print(f"Your Words: {your_words}\n")
 print("FINAL STORY:")
 print(f"{story}\n")
