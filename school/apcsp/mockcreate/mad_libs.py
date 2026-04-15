@@ -16,7 +16,7 @@ phrases = [
 sets = [set1, set2, set3]
 
 # Finds out how long of a phrase the user wants
-print("Welcome to Mad Libs!!")
+print("Welcome to Mad Libs!!!")
 choice = int(input(f"""
 Pick a set:
 1 - Short | {len(set1)} Words
