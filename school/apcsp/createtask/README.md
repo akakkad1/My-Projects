@@ -39,7 +39,6 @@ Submit one PDF file that contains all of your program code (including comments).
 * **Calls to your student-developed procedure**
 * **Instructions for output (tactile, audible, visual, or textual)** based on input
 
-# Submission Requirements
 ## COMPONENT B: VIDEO (CREATED INDEPENDENTLY)
 
 Submit one video file that demonstrates the running of your program as described below. Collaboration is not allowed during the development of your video.
@@ -58,7 +57,6 @@ Submit one video file that demonstrates the running of your program as described
 * **Length:** No more than 1 minute in length
 * **File Size:** No more than 30MB in file size
 
-# Submission Requirements
 ## COMPONENT C: PERSONALIZED PROJECT REFERENCE (CREATED INDEPENDENTLY)
 
 To assist in responding to the written response prompts on exam day, submit required portions of your code by capturing and pasting program code segments you developed during the administration of this task. Screen captures should not be blurry, and text should be at least 10-point font size. Your code segments should not include any comments. These code segments will be made available to you on exam day only if this component is submitted as final in the AP Digital Portfolio by the deadline.
