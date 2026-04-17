@@ -2,13 +2,11 @@
 
 ## Supported Versions
 
-This repository contains code from events, hackathons, and school projects. These projects are generally provided "as-is" for archival and portfolio purposes. Active maintenance is limited to the most recent versions of these projects.
+This repository contains code from events, hackathons, and school projects. These projects are generally provided "as-is" for archival and portfolio purposes. Active maintenance is limited to the most recent of these projects.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| Latest Main/Master | :white_check_mark: |
-| Archived / School Projects | :x:                |
-| Event / Hackathon Tags | :x:                |
+| Latest Projects in Main | :white_check_mark: |
 
 ## Reporting a Vulnerability
 
