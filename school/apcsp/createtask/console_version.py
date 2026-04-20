@@ -10,17 +10,18 @@ def check_courses():
     while True:
         courses = int(input("How many courses do you have?: "))
         apibs = int(input("How many of those are AP/IB?: "))
+        regulars = courses - apibs
         
         if apibs > courses:
             print("AP/IB count cannot exceed total courses. Try again.")
             continue
 
         os.system('clear')
-        print(f"Total: {courses} | AP/IB: {apibs} | Regular: {courses - apibs}")
+        print(f"Total: {courses} | AP/IB: {apibs} | Regular: {regulars}")
         user_check = input("Is this correct (y/n): ").lower()
         if user_check == 'y':
             os.system('clear')
-            return courses, apibs
+            return courses, apibs, regulars
         elif user_check == 'n':
             os.system('clear')
             print("Restarting.\n")
@@ -30,8 +31,7 @@ def check_courses():
         
 
 # Takes the return and defines course amounts from the function
-course_amount, apib_amount = check_courses()
-regular_amount = course_amount - apib_amount
+course_amount, apib_amount, regular_amount = check_courses()
 
 # Sets up the lists needed to store grades and letters
 letter_grades = ["a", "b", "c", "d", "f"]
