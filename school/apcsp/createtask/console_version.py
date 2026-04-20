@@ -7,19 +7,19 @@ print("Welcome to GPA Calculator.\n")
 # Finds out how many courses the user has and saves them, along with a double-check function
 def check_courses():
     while True:
-        course_amt = int(input("How many courses do you have?: "))
-        ap_amt = int(input("How many of those are AP/IB?: "))
+        courses = int(input("How many courses do you have?: "))
+        apibs = int(input("How many of those are AP/IB?: "))
         
-        if ap_amt > course_amt:
+        if apibs > courses:
             print("AP/IB count cannot exceed total courses. Try again.")
             continue
 
         os.system('clear')
-        print(f"Total: {course_amt} | AP/IB: {ap_amt} | Regular: {course_amt - ap_amt}")
+        print(f"Total: {courses} | AP/IB: {apibs} | Regular: {courses - apibs}")
         user_check = input("Is this correct (y/n): ").lower()
         if user_check == 'y':
             os.system('clear')
-            return course_amt, ap_amt
+            return courses, apibs
         elif user_check == 'n':
             os.system('clear')
             print("Restarting.\n")
