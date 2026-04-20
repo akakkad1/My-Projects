@@ -85,14 +85,6 @@ def calculate_grades(regulars, apibs, is_weighted):
 # Uses the calculate_grades function to save and print a weighted and unweighted GPA
 w_gpa = calculate_grades(regular_grades, apib_grades, True)
 uw_gpa = calculate_grades(regular_grades, apib_grades, False)
-
-<<<<<<< HEAD
-gpa_sum = calculate_grades(regular_grades,apib_grades)
-print(gpa_sum)
-final_gpa = gpa_sum/course_amount
-print(final_gpa)
-=======
 os.system('clear')
 print(f"Your Weighted GPA is: {round(w_gpa, 2)}")
 print(f"Your Unweighted GPA is: {round(uw_gpa, 2)}")
->>>>>>> 1e4230b (Code improvements)
