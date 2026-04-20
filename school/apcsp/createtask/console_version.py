@@ -78,7 +78,7 @@ def calculate_grades(regulars, apibs, is_weighted):
             points += 1
         grade_points.append(points)
         
-    final_gpa = sum(all_points) / len(all_points)
+    final_gpa = sum(grade_points) / len(grade_points)
     return final_gpa
 
 # Uses the calculate_grades function to save and print a weighted and unweighted GPA
