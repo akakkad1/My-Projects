@@ -67,19 +67,18 @@ gpa_points = {
 
 # Takes the letter grades inputted and uses the dictionary to calculate the gpa
 def calculate_grades(regulars, apibs, is_weighted):
-    total_points = 0
+    grade_points = [] 
     for grade in regulars:
-        total_points += gpa_points[grade]
-    
+        grade_points.append(gpa_points[grade])
+        
     for grade in apibs:
         points = gpa_points[grade]
-        # Statement to add the extra points for AP/IBs
+        # Add the extra point for weighted AP grades
         if is_weighted and grade != "f":
             points += 1
-        total_points += points
-    
-    final_gpa = total_points / course_amount
+        grade_points.append(points)
         
+    final_gpa = sum(all_points) / len(all_points)
     return final_gpa
 
 # Uses the calculate_grades function to save and print a weighted and unweighted GPA
