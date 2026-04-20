@@ -5,6 +5,7 @@ os.system('clear')
 print("Welcome to GPA Calculator.\n")
 
 # Finds out how many courses the user has and saves them, along with a double-check function
+# CODE WRITTEN WITH THE AID OF GENERATIVE AI- GOOGLE GEMINI
 def check_courses():
     while True:
         courses = int(input("How many courses do you have?: "))
@@ -57,6 +58,7 @@ while i <= regular_amount:
         print("Invalid grade, try again.")
 
 # Uses a dictionary to define the numeric value for each letter grade
+# CODE WRITTEN WITH THE AID OF GENERATIVE AI- GOOGLE GEMINI
 gpa_points = {
     "a": 4,
     "b": 3,
@@ -70,7 +72,7 @@ def calculate_grades(regulars, apibs, is_weighted):
     grade_points = [] 
     for grade in regulars:
         grade_points.append(gpa_points[grade])
-        
+
     for grade in apibs:
         points = gpa_points[grade]
         # Add the extra point for weighted AP grades
