@@ -1,0 +1,23 @@
+schemaVersion: 2.2.0
+metadata:
+  name: python-autoinstall
+projects:
+  - name: my-project
+    git:
+      remotes:
+        origin: "https://github.com/akakkad1/My-Projects.git"
+components:
+  - name: python-runtime
+    container:
+      image: registry.access.redhat.com/ubi9/python-311
+      mountSources: true
+commands:
+  - id: auto-pip-install
+    exec:
+      component: python-runtime
+      # This checks if requirements.txt exists, then installs it
+      commandLine: "if [ -f requirements.txt ]; then pip install -r requirements.txt; fi"
+      workingDir: ${PROJECT_SOURCE}
+events:
+  postStart:
+    - auto-pip-install
