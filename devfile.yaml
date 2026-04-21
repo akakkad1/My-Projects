@@ -1,6 +1,6 @@
 schemaVersion: 2.2.0
 metadata:
-  name: python-autoinstall
+  name: my-projects
 projects:
   - name: my-project
     git:
