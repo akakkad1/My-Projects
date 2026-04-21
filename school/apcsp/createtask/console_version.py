@@ -9,6 +9,9 @@ print("Welcome to GPA Calculator.\n")
 def check_courses():
     while True:
         courses = int(input("How many courses do you have?: "))
+        if courses == 0:
+            print("This calculator is useless without courses! Please enter a number greater than 0.\n")
+            continue
         apibs = int(input("How many of those are AP/IB?: "))
         regulars = courses - apibs
         
