@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Waste Disposal{% endblock %}</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f1f1f1;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #2d572c;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header .logo h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            background-color: #3a9d23;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 10;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 14px 20px;
+            display: block;
+        }
+        nav ul li a:hover {
+            background-color: #2d572c;
+            border-radius: 5px;
+        }
+
+        /* Main Content Styles */
+        main {
+            padding: 20px;
+            background-color: white;
+            margin: 20px auto;
+            max-width: 1000px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        main h2 {
+            color: #2d572c;
+            margin-top: 0;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #2d572c;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>Waste Disposal Guide</D></h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/batteries">Batteries</a></li>
+                <li><a href="/electronics">Electronics</a></li>
+                <li><a href="/plastics">Plastics</a></li>
+                <li><a href="/chemicals">Household Chemicals</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

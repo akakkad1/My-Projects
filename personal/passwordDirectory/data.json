@@ -1,0 +1,10 @@
+{
+    "google": {
+        "username": "bob",
+        "password": "1234"
+    },
+    "twitter": {
+        "username": "alice",
+        "password": "abcd"
+    }
+}

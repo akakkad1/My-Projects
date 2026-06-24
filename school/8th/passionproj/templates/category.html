@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ data.title }}{% endblock %}
+{% block content %}
+<h1>{{ data.title }}</h1>
+<p><strong>Environmental Impact:</strong> {{ data.impact }}</p>
+<h2>Proper Disposal Methods:</h2>
+<ul class="list-group">
+    {% for method in data.methods %}
+        <li class="list-group-item">{{ method }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
